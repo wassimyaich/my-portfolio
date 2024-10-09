@@ -68,3 +68,47 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('') no-repeat center center/cover;
+  color: white;
+}
+
+.navbar {
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar.scrolled {
+  background-color: rgba(33, 37, 41, 0.9) !important;
+}
+
+section {
+  padding-top: 80px;
+}
+
+.card {
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.progress {
+  height: 10px;
+  border-radius: 5px;
+}
+
+.progress-bar {
+  background-color: #007bff;
+}
+
+footer {
+  margin-top: auto;
+}

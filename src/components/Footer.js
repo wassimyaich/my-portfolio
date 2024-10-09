@@ -1,17 +1,23 @@
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+// components/Footer.js
+import React from 'react';
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="bg-dark text-white text-center py-3">
-      <p>&copy; {new Date().getFullYear()} Your Name. All rights reserved.</p>
-      <div>
-        <a href="https://github.com/your-username" className="text-white mx-2" target="_blank" rel="noopener noreferrer">
-          <FaGithub size={30} />
-        </a>
-        <a href="https://linkedin.com/in/your-username" className="text-white mx-2" target="_blank" rel="noopener noreferrer">
-          <FaLinkedin size={30} />
-        </a>
-        {/* Add more icons as needed */}
+    <footer className="py-4 text-center text-white bg-dark">
+      <div className="container">
+        <div className="mb-3">
+          <a href="https://github.com/your-username" className="mx-2 text-white" target="_blank" rel="noopener noreferrer">
+            <FaGithub size={24} />
+          </a>
+          <a href="https://linkedin.com/in/your-username" className="mx-2 text-white" target="_blank" rel="noopener noreferrer">
+            <FaLinkedin size={24} />
+          </a>
+          <a href="https://twitter.com/your-username" className="mx-2 text-white" target="_blank" rel="noopener noreferrer">
+            <FaTwitter size={24} />
+          </a>
+        </div>
+        <p>&copy; {new Date().getFullYear()} Wassim Yaich. All rights reserved.</p>
       </div>
     </footer>
   );

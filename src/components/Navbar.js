@@ -1,56 +1,40 @@
-// src/components/Navbar.js
-import React from 'react';
-import { Link } from 'react-scroll';
+// components/Navbar.js (completed)
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
+  const [isNavCollapsed, setIsNavCollapsed] = useState(true);
+  const location = useLocation();
+
+  const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
+
+  useEffect(() => {
+    setIsNavCollapsed(true);
+  }, [location]);
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" >
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div className="container">
-        <a className="navbar-brand" href="#">Wassim yaich</a>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <Link className="navbar-brand" to="/">Wassim Yaich</Link>
+        <button className="navbar-toggler" type="button" onClick={handleNavCollapse}>
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ml-auto">
+        <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`}>
+          <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <Link 
-                activeClass="active" 
-                to="about" 
-                spy={true} 
-                smooth={true} 
-                offset={-70} 
-                duration={500} 
-                className="nav-link"
-              >
-                About
-              </Link>
+              <Link className={`nav-link ${location.pathname === '/' ? 'active' : ''}`} to="/">Home</Link>
             </li>
             <li className="nav-item">
-              <Link 
-                activeClass="active" 
-                to="projects" 
-                spy={true} 
-                smooth={true} 
-                offset={-70} 
-                duration={500} 
-                className="nav-link"
-              >
-                Projects
-              </Link>
+              <Link className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`} to="/about">About</Link>
             </li>
             <li className="nav-item">
-              <Link 
-                activeClass="active" 
-                to="contact" 
-                spy={true} 
-                smooth={true} 
-                offset={-70} 
-                duration={500} 
-                className="nav-link"
-              >
-                Contact
-              </Link>
+              <Link className={`nav-link ${location.pathname === '/projects' ? 'active' : ''}`} to="/projects">Projects</Link>
+            </li>
+            <li className="nav-item">
+              <Link className={`nav-link ${location.pathname === '/skills' ? 'active' : ''}`} to="/skills">Skills</Link>
+            </li>
+            <li className="nav-item">
+              <Link className={`nav-link ${location.pathname === '/contact' ? 'active' : ''}`} to="/contact">Contact</Link>
             </li>
           </ul>
         </div>

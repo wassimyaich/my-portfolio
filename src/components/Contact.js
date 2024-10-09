@@ -1,5 +1,6 @@
-// src/components/Contact.js
+// components/Contact.js
 import React, { useState } from 'react';
+import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from 'react-icons/fa';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -20,27 +21,38 @@ const Contact = () => {
     console.log(formData);
     setSubmitted(true);
     // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      message: '',
-    });
+    setFormData({ name: '', email: '', message: '' });
   };
 
   return (
     <section id="contact" className="py-5" data-aos="fade-up">
       <div className="container">
-        <h2 className="display-4 text-center mb-5">Contact Me</h2>
+        <h2 className="mb-5 text-center display-4">Contact Me</h2>
         <div className="row">
-          <div className="col-md-6 mx-auto">
+          <div className="col-md-6">
+            <h3 className="mb-4">Get in Touch</h3>
+            <p className="mb-4 lead">I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
+            <ul className="list-unstyled">
+              <li className="mb-3">
+                <FaEnvelope className="me-2 text-primary" /> email@example.com
+              </li>
+              <li className="mb-3">
+                <FaPhoneAlt className="me-2 text-primary" /> +1 (123) 456-7890
+              </li>
+              <li className="mb-3">
+                <FaMapMarkerAlt className="me-2 text-primary" /> City, Country
+              </li>
+            </ul>
+          </div>
+          <div className="col-md-6">
             {submitted ? (
               <div className="alert alert-success" role="alert">
                 Thank you for your message! I'll get back to you soon.
               </div>
             ) : (
               <form onSubmit={handleSubmit}>
-                <div className="form-group">
-                  <label htmlFor="name">Name</label>
+                <div className="mb-3">
+                  <label htmlFor="name" className="form-label">Name</label>
                   <input 
                     type="text" 
                     id="name" 
@@ -51,8 +63,8 @@ const Contact = () => {
                     required 
                   />
                 </div>
-                <div className="form-group">
-                  <label htmlFor="email">Email</label>
+                <div className="mb-3">
+                  <label htmlFor="email" className="form-label">Email</label>
                   <input 
                     type="email" 
                     id="email" 
@@ -63,8 +75,8 @@ const Contact = () => {
                     required 
                   />
                 </div>
-                <div className="form-group">
-                  <label htmlFor="message">Message</label>
+                <div className="mb-3">
+                  <label htmlFor="message" className="form-label">Message</label>
                   <textarea 
                     id="message" 
                     name="message" 
@@ -75,7 +87,7 @@ const Contact = () => {
                     required
                   ></textarea>
                 </div>
-                <button type="submit" className="btn btn-primary btn-block">Send Message</button>
+                <button type="submit" className="btn btn-primary">Send Message</button>
               </form>
             )}
           </div>
