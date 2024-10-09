@@ -28,7 +28,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-5">
+    <section id="contact" className="py-5" data-aos="fade-up">
       <div className="container">
         <h2 className="display-4 text-center mb-5">Contact Me</h2>
         <div className="row">

@@ -4,7 +4,7 @@ import { Link } from 'react-scroll';
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" >
       <div className="container">
         <a className="navbar-brand" href="#">Wassim yaich</a>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
