@@ -1,7 +1,18 @@
-.App {
+/* .App {
   text-align: center;
+} */
+.App {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  min-height: 100vh; /* Full viewport height */
 }
-
+html, body {
+  height: 100%; /* Ensure full height for body */
+  margin: 0; /* Remove default margin */
+}
+main {
+  flex: 1; /* Allow main content to grow and fill space */
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -75,10 +86,14 @@ body {
 
 .hero {
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('') no-repeat center center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('components/assets/images/background.png') no-repeat center center/cover;
   color: white;
 }
-
+.heroprojects {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('components/assets/images/projects.jpg') no-repeat center center/cover;
+  color: white;
+}
 .navbar {
   transition: all 0.3s ease-in-out;
 }
@@ -109,6 +124,22 @@ section {
   background-color: #007bff;
 }
 
-footer {
-  margin-top: auto;
+/* add new home  */
+.container {
+  z-index: 10; /* Ensure text is above the background */
+}
+
+.hero-image {
+  position: absolute;
+  bottom: 20px; /* Positioning the image */
+  right: 20px; /* Adjust as needed */
+}
+
+.btn-primary {
+  background-color: #007bff; /* Bootstrap primary color */
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; /* Darker shade on hover */
 }

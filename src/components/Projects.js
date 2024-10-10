@@ -30,7 +30,7 @@ const Projects = () => {
     : projects.filter(project => project.technologies.includes(filter));
 
   return (
-    <section id="projects" className="py-5 bg-light" data-aos="fade-up">
+    <section id="projects" className="py-5 heroprojects bg-light" data-aos="fade-up">
       <div className="container">
         <h2 className="mb-5 text-center display-4">Projects</h2>
         <div className="mb-4">

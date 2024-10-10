@@ -14,7 +14,7 @@ const skillsData = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-5" data-aos="fade-up">
+    <section id="skills" className="py-5 heroprojects" data-aos="fade-up">
       <div className="container">
         <h2 className="mb-5 text-center display-4">Skills</h2>
         <div className="row">
