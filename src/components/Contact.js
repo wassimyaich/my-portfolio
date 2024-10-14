@@ -34,13 +34,13 @@ const Contact = () => {
             <p className="mb-4 lead">I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
             <ul className="list-unstyled">
               <li className="mb-3">
-                <FaEnvelope className="me-2 text-primary" /> email@example.com
+                <FaEnvelope className="me-2 text-primary" /> yaichwassim1@gmail.com
               </li>
               <li className="mb-3">
-                <FaPhoneAlt className="me-2 text-primary" /> +1 (123) 456-7890
+                <FaPhoneAlt className="me-2 text-primary" /> +216 97 216 234
               </li>
               <li className="mb-3">
-                <FaMapMarkerAlt className="me-2 text-primary" /> City, Country
+                <FaMapMarkerAlt className="me-2 text-primary" /> Sfax, Tunisia
               </li>
             </ul>
           </div>

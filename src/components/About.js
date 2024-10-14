@@ -1,6 +1,7 @@
 // components/About.js
 import React from 'react';
 import { FaCode, FaChartBar, FaLaptopCode } from 'react-icons/fa';
+import wassimImage from './assets/images/wassim.png';
 
 const About = () => {
   return (
@@ -8,8 +9,10 @@ const About = () => {
       <div className="container">
         <h2 className="mb-5 text-center display-4">About Me</h2>
         <div className="row">
-          <div className="col-md-6">
-            <img src="/path-to-your-image.jpg" alt="Wassim Yaich" className="mb-4 img-fluid rounded-circle" />
+          <div className="col-md-5">
+          <img src={wassimImage} alt="Wassim Yaich" className="mb-5 img-fluid rounded-circle " style={{ marginTop: '-100px' }} />
+
+            {/* <img src="components/assets/images/wassim.jpg" alt="Wassim Yaich" className="mb-4 img-fluid rounded-circle" /> */}
           </div>
           <div className="col-md-6">
             <p className="lead">
