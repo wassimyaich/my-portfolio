@@ -89,10 +89,31 @@ body {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('components/assets/images/background.png') no-repeat center center/cover;
   color: white;
 }
-.heroprojects {
+.contactprojects{
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('components/assets/images/projects.jpg') no-repeat center center/cover;
   color: white;
+}
+.heroprojects {
+  
+  background: linear-gradient(135deg, #004581, #DDE8F0,#018ABD,#97CBDC);
+
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  position: relative;
+  color: #fff;
+  padding: 4rem 0;
+}
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 .navbar {
   transition: all 0.3s ease-in-out;
