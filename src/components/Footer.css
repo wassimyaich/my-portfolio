@@ -1,29 +1,31 @@
 /* Footer.css */
 .footer {
-    padding: 20px 0; /* Add padding for better spacing */
-    position: relative; /* Position relative for any absolute elements */
-  }
-  
-  .social-links {
-    display: flex; /* Use Flexbox for horizontal alignment */
-    justify-content: center; /* Center the items horizontally */
-  }
-  
-  .social-links a {
-    margin: 0 10px; /* Add horizontal spacing between icons */
-    transition: color 0.3s ease; /* Smooth transition for hover effect */
-  }
-  
-  .social-links a:hover {
-    color: #61dafb; /* Change color on hover */
-  }
-  
-  .containers {
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
-  }
-  
-  .footer p {
-    margin-top: 10px; /* Add some space above the copyright text */
-  }
+  padding: 20px 0;
+  background-color: #343a40;
+  text-align: center;
+  width: 100%;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+}
+
+.social-links a {
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #61dafb;
+}
+
+.containers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer p {
+  margin-top: 10px;
+}

@@ -75,7 +75,9 @@ const Projects = () => {
   const totalPages = Math.ceil(filteredProjects.length / projectsPerPage);
 
   return (
-    <section id="projects" className="py-5 heroprojects bg-light" data-aos="fade-up">
+    // <section id="projects" className="py-5 heroprojects bg-light" data-aos="fade-up">
+    <section id="skills" className="py-5 skills-section"data-aos="fade-up">
+
       <div className="container">
         <h2 className="mb-5 text-center display-4">Projects</h2>
 
